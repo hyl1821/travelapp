@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- 头像和选择箭头 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp">
+
+        <ImageView
+            android:id="@+id/iv_my_avatar"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/avatar1"
+            android:scaleType="centerCrop"/>
+
+        <ImageView
+            android:id="@+id/iv_select_arrow"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@android:drawable/arrow_down_float"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="8dp"/>
+    </LinearLayout>
+
+    <!-- 选择头像按钮 -->
+    <Button
+        android:id="@+id/btn_select_avatar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="选择头像"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- 用户名 -->
+    <TextView
+        android:id="@+id/tv_my_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="刀刀"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- 修改用户名输入框 -->
+    <EditText
+        android:id="@+id/et_new_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入新用户名"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- 修改用户名按钮 -->
+    <Button
+        android:id="@+id/btn_change_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="修改用户名"
+        android:layout_marginBottom="32dp"/>
+
+    <!-- 查看心得按钮 -->
+    <Button
+        android:id="@+id/btn_view_articles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="查看心得"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- 删除心得按钮 -->
+    <Button
+        android:id="@+id/btn_delete_articles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="删除心得"
+        android:layout_marginBottom="32dp"/>
+
+    <!-- 退出登录按钮 -->
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="退出登录"
+        android:background="#FF4444"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="32dp"/>
+</LinearLayout>
