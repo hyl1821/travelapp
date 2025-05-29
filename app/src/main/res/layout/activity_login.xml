@@ -57,8 +57,17 @@
         android:layout_height="wrap_content"
         android:text="注册"
         android:background="#F5F5F5"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/update2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="改密码"
+        android:background="#F5F5F5"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="16dp"  />
 
     <View
         android:layout_width="match_parent"

@@ -1,6 +1,7 @@
 package com.example.travelapp;
 
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -98,7 +99,9 @@ public class MyFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 // 实现退出登录逻辑，这里可以清除用户登录状态并跳转到登录界面
-                Toast.makeText(getActivity(), "退出登录功能待实现", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getActivity(), MainActivity.class);
+                startActivity(intent);
+                getActivity().finish();
             }
         });
 

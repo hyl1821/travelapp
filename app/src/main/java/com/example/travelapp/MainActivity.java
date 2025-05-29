@@ -10,22 +10,24 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private EditText etPhone, etPassword;
-    private Button btnLogin, btnRegister;
+    private Button btnLogin, btnRegister, btnUpdatePassword;
     private UserDAO userDAO;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login); // 使用正确的布局文件名
+        setContentView(R.layout.activity_login);
 
         etPhone = findViewById(R.id.et_phone);
         etPassword = findViewById(R.id.et_password);
         btnLogin = findViewById(R.id.btn_login);
         btnRegister = findViewById(R.id.btn_register);
+        btnUpdatePassword = findViewById(R.id.update2);
         userDAO = new UserDAO(this);
 
         btnLogin.setOnClickListener(v -> loginUser());
         btnRegister.setOnClickListener(v -> startActivity(new Intent(this, RegisterActivity.class)));
+        btnUpdatePassword.setOnClickListener(v -> startActivity(new Intent(this, update_test.class)));
     }
 
     private void loginUser() {

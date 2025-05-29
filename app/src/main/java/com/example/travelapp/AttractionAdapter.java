@@ -33,7 +33,7 @@ public class AttractionAdapter extends RecyclerView.Adapter<AttractionAdapter.Vi
         if (attractionList.size() > 0) {
             AttractionItem item = attractionList.get(position);
             holder.tvTitle.setText(item.getTitle());
-            Glide.with(context).load(item.getImageUrl()).into(holder.ivImage);
+            Glide.with(context).load(item.getImageResId()).into(holder.ivImage);
         }
     }
 

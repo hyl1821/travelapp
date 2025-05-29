@@ -33,7 +33,7 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.ViewHolder> {
         if (foodList.size() > 0) {
             FoodItem item = foodList.get(position);
             holder.tvTitle.setText(item.getTitle());
-            Glide.with(context).load(item.getImageUrl()).into(holder.ivImage);
+            Glide.with(context).load(item.getImageResId()).into(holder.ivImage);
         }
     }
 

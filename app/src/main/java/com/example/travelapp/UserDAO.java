@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 
 public class UserDAO {
     private SQLiteHelper dbHelper;
@@ -64,5 +65,20 @@ public class UserDAO {
         cursor.close();
         db.close();
         return exists;
+    }
+
+    // 修改密码
+    public int update(String phone, String newPassword, String oldPassword) {
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        boolean login = validateUser(phone, oldPassword);
+        if (login) {
+            cv.put(SQLiteHelper.COLUMN_PASSWORD, newPassword);
+        } else {
+            return -1;
+        }
+        int i = db.update(SQLiteHelper.TABLE_NAME, cv, SQLiteHelper.COLUMN_PHONE + " = ?", new String[]{phone});
+        db.close();
+        return i;
     }
 }

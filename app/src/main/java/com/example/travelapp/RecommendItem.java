@@ -1,16 +1,16 @@
 package com.example.travelapp;
 
 public class RecommendItem {
-    private String imageUrl;
+    private int imageResId;
     private String title;
 
-    public RecommendItem(String imageUrl, String title) {
-        this.imageUrl = imageUrl;
+    public RecommendItem(int imageResId, String title) {
+        this.imageResId = imageResId;
         this.title = title;
     }
 
-    public String getImageUrl() {
-        return imageUrl;
+    public int getImageResId() {
+        return imageResId;
     }
 
     public String getTitle() {

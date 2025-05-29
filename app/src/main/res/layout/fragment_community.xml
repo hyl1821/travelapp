@@ -41,44 +41,63 @@
         app:tabTextColor="#666666">
 
         <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_recommend"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="推荐" />
 
         <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_hot"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="热门" />
 
         <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_latest"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="最新" />
     </com.google.android.material.tabs.TabLayout>
 
-    <!-- 内容列表 -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+    <!-- 推荐列表 -->
+    <ListView
+        android:id="@+id/list_recommend"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:clipToPadding="false"
         android:paddingBottom="56dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tabLayout" />
+        android:visibility="visible"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/tabLayout" />
 
-    <!-- 发布按钮 -->
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:src="@drawable/ic_community"
-        android:tint="#FFFFFF"
-        app:backgroundTint="#3F51B5"
-        app:elevation="6dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+    <!-- 热门列表 -->
+    <ListView
+        android:id="@+id/list_hot"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingBottom="56dp"
+        android:visibility="gone"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/tabLayout" />
+
+    <!-- 最新列表 -->
+    <ListView
+        android:id="@+id/list_latest"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingBottom="56dp"
+        android:visibility="gone"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/tabLayout" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

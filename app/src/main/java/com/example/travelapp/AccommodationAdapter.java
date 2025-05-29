@@ -9,7 +9,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
-
 import java.util.List;
 
 public class AccommodationAdapter extends RecyclerView.Adapter<AccommodationAdapter.ViewHolder> {
@@ -35,7 +34,7 @@ public class AccommodationAdapter extends RecyclerView.Adapter<AccommodationAdap
             AccommodationItem item = accommodationList.get(position);
             holder.tvTitle.setText(item.getTitle());
             holder.tvPrice.setText(item.getPrice());
-            Glide.with(context).load(item.getImageUrl()).into(holder.ivImage);
+            Glide.with(context).load(item.getImageResId()).into(holder.ivImage);
         }
     }
 

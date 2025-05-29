@@ -32,16 +32,6 @@
         android:padding="16dp"
         android:background="@android:drawable/edit_text"
         android:inputType="textPassword"
-        android:layout_marginBottom="16dp" />
-
-    <EditText
-        android:id="@+id/et_reg_confirm_password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="确认密码"
-        android:padding="16dp"
-        android:background="@android:drawable/edit_text"
-        android:inputType="textPassword"
         android:layout_marginBottom="24dp" />
 
     <Button
@@ -49,19 +39,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="注册"
-        android:background="#3F51B5"
-        android:textColor="#FFFFFF"
-        android:layout_marginBottom="16dp" />
+        android:textSize="27dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="fanhui" />
 
-    <TextView
-        android:id="@+id/tv_login"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/return1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="已有账号？返回登录"
-        android:textSize="14sp"
-        android:textColor="#3F51B5"
-        android:layout_gravity="center_horizontal"
-        android:clickable="true"
-        android:textStyle="bold" />
+        android:text="返回"
+        android:textSize="27dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="fanhui" />
 
 </LinearLayout>

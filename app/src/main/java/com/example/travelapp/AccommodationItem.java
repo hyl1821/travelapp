@@ -1,18 +1,18 @@
 package com.example.travelapp;
 
 public class AccommodationItem {
-    private String imageUrl;
+    private int imageResId;
     private String title;
     private String price;
 
-    public AccommodationItem(String imageUrl, String title, String price) {
-        this.imageUrl = imageUrl;
+    public AccommodationItem(int imageResId, String title, String price) {
+        this.imageResId = imageResId;
         this.title = title;
         this.price = price;
     }
 
-    public String getImageUrl() {
-        return imageUrl;
+    public int getImageResId() {
+        return imageResId;
     }
 
     public String getTitle() {
